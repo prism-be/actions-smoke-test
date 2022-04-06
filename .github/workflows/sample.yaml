@@ -1,0 +1,22 @@
+﻿# The name of the work flow. Badges will use this name
+name: 'Sample Smoke Testing'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run Smoke Test
+        id: dotnet-code-metrics
+        uses: prism-be/actions-smoke-test@main
+        with:
+          sitemap: ${{ secrets.SITEMAP }}
