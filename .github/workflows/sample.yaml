@@ -16,7 +16,6 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run Smoke Test
-        id: dotnet-code-metrics
         uses: prism-be/actions-smoke-test@main
         with:
           sitemap: ${{ secrets.SITEMAP }}
