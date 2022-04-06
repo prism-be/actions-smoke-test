@@ -1,0 +1,16 @@
+﻿name: 'Simple Smoke Test'
+description: 'Run a simple smoke test on a web application based on sitemap'
+branding:
+  icon: activity
+  color: orange
+inputs:
+  sitemap:
+    description:
+      'Url to the sitemap to start the smoke test.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '-s'
+    - ${{ inputs.sitemap }}
