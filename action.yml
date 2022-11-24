@@ -1,5 +1,5 @@
-﻿name: 'Simple Smoke Test'
-description: 'Run a simple smoke test on a web application based on sitemap'
+name: 'Simple Smoke Test'
+description: 'Run a simple smoke test on a web application based on sitemap, the action will download the sitemap, parse and call every url found in the sitemap.'
 branding:
   icon: activity
   color: orange
